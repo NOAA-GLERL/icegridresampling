@@ -4,11 +4,10 @@ Scripts used to convert historical Great Lakes ice cover 510 x 516 grids to 1024
 
 The spatial interpolation for converting grids from the 510 x 516 to the 1024 x 1024 grids are processed by the “Resampling_Raster.R” script.  The temporal interpolation to create a daily data product prior to 2011 was estimated by the “Time_Interp.R” script.  Both scripts utilize RStudio version 1.1.463.
 
-Sample code for reading in the ice data (as ASCII files) is available in Python, Matlab and R.
+Sample code for reading in the ice data (from ".ct" ASCII files) is available in Python, Matlab and R.
 
-More information available about the ice data set and these scripts in the manuscript below.
-
-Yang, T.Y., J. Kessler, L. Mason, P.Y. Chu, J. Wang, (2020) A Consistent Great Lakes Ice Cover Digital Data Set for Winters 1973-2019. Scientific Data, in review.
+More information available about the ice data set can be found at: 
+Yang, T.-Y., Kessler, J., Mason, L., Chu, P. Y., & Wang, J. (2020). A consistent Great Lakes ice cover digital data set for winters 1973–2019. Scientific Data, 7(1). https://doi.org/10.1038/s41597-020-00603-1
 
 
 
