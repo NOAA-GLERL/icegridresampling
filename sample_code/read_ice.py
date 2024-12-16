@@ -21,24 +21,21 @@ Read_IceCover.py: Jun 2020 @ NOAA GLERL yang.3328@osu.edu/james.kessler@noaa.gov
 
 
 
+import numpy as np
+from linecache import getline as gl
 
+file_name = "file name"
 
+# Read header
+hdr = [gl(file_name, i) for i in range(1,7)]
+values = [float(h.split(" ")[-1].strip()) for h in hdr]
+ncols, nrows, xllcorner, yllcorner, cellsize, NODATA_value = values
+del hdr, values
 
-#import numpy as np
-#from linecache import getline as gl
-#
-#file_name = "file name"
-#
-## Read header
-#hdr = [gl(file_name, i) for i in range(1,7)]
-#values = [float(h.split(" ")[-1].strip()) for h in hdr]
-#ncols, nrows, xllcorner, yllcorner, cellsize, NODATA_value = values
-#del hdr, values
-#
-## Read ice cover data
-#ice_cover  = np.loadtxt(file_name, skiprows=7)
-#
-## Read ltitude/longitude data
-#lat = np.loadtxt("1024_latgrid.txt")
-#lon = np.loadtxt("1024_longrid.txt")
-#
+# Read ice cover data
+ice_cover  = np.loadtxt(file_name, skiprows=7)
+
+# Read ltitude/longitude data
+lat = np.loadtxt("1024_latgrid.txt")
+lon = np.loadtxt("1024_longrid.txt")
+
